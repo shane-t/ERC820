@@ -16,7 +16,7 @@
     "lint:sol": "npx solium --reporter pretty --dir contracts",
     "build:sol": "solcpiler -i './contracts/*.sol' --solc-version=\"v0.4.24+commit.e67f0147\" --output-artifacts-dir artifacts --insert-file-names imports",
     "build": "npm run clean && npm run build:sol",
-    "test": "npm run build && mocha --harmony",
+    "test": "npm run build && node_modules/mocha/bin/mocha --harmony",
     "clean": "rm -rf build artifacts",
     "info": "node js/info.js",
     "prepack": "npm run test"
